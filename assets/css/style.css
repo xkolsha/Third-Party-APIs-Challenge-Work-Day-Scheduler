@@ -1,4 +1,8 @@
-.saveButton {
+/* .saveButton {
   background-color: #bf3b5e;
   color: #cee8f2;
+} */
+
+.bg-inherit {
+  background-color: inherit;
 }

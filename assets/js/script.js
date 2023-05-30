@@ -10,19 +10,19 @@ $(function () {
 
     if (currentPeriod === blockPeriod) {
       if (blockHour < currentHour) {
-        $(this).addClass("bg-secondary");
+        $(this).addClass("bg-dark-subtle");
       } else if (blockHour === currentHour) {
-        $(this).removeClass("bg-secondary");
-        $(this).addClass("bg-primary");
+        $(this).removeClass("bg-dark-subtle");
+        $(this).addClass("bg-light");
       } else {
-        $(this).removeClass("bg-secondary");
-        $(this).removeClass("bg-primary");
+        $(this).removeClass("bg-dark-subtle");
+        $(this).removeClass("bg-light");
         $(this).addClass("bg-primary-subtle");
       }
     } else if (currentPeriod === "AM" && blockPeriod === "PM") {
       $(this).addClass("bg-primary-subtle");
     } else if (currentPeriod === "PM" && blockPeriod === "AM") {
-      $(this).addClass("bg-secondary");
+      $(this).addClass("bg-dark-subtle");
     }
   });
 
