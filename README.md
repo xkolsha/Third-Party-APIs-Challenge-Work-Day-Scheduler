@@ -43,7 +43,7 @@ SO THAT I can manage my time effectively
 
 ## Mock Up
 
-![Mock up of the website](./assets/images/Web%20capture_26-5-2023_12918_xkolsha.github.io.jpeg)
+![Mock up of the website](./assets/images/Screenshot%202023-05-30%20151412.png)
 
 ## Credits
 
