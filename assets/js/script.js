@@ -16,4 +16,20 @@ $(function () {
       $(this).addClass("future");
     }
   });
+
+  $(".saveBtn").on("click", function () {
+    var hourId = $(this).parent().attr("id");
+    var input = $(this).siblings(".description").val();
+
+    localStorage.setItem(hourId, input);
+  });
+
+  $(".description").each(function () {
+    var id = $(this).parent().attr("id");
+    var saved = localStorage.getItem(id);
+
+    if (saved !== null) {
+      $(this).val(saved);
+    }
+  });
 });
