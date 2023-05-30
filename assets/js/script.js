@@ -2,18 +2,19 @@ $(function () {
   $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
 
   $(".time-block").each(function () {
-    var currentHour = dayjs().hour();
+    var currentHour = parseInt(dayjs().format("h"));
     var blockHour = parseInt($(this).attr("id").split("-")[1]);
+    console.log(currentHour, blockHour);
 
     if (blockHour < currentHour) {
-      $(this).addClass("past");
+      $(this).addClass("bg-secondary");
     } else if (blockHour === currentHour) {
-      $(this).removeClass("past");
-      $(this).addClass("present");
+      $(this).removeClass("bg-secondary");
+      $(this).addClass("bg-primary");
     } else {
-      $(this).removeClass("past");
-      $(this).removeClass("present");
-      $(this).addClass("future");
+      $(this).removeClass("bg-secondary");
+      $(this).removeClass("bg-primary");
+      $(this).addClass("bg-primary-subtle");
     }
   });
 
